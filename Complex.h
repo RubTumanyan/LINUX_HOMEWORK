@@ -6,7 +6,7 @@
 class Complex{
 	private:
 		double real;
-		double image;
+		double imag;
 	public:
 		Complex(double r , double i);
 
@@ -18,7 +18,9 @@ class Complex{
 		Complex operator*(double scalar)const;
 		double abs()const;
 
-		friend std::ostream& operator<<(std::ostream& os, Complex& o)const;
+                bool operator>(const Complex& other)const;
+		
+		friend std::ostream& operator<<(std::ostream& os, Complex& o);
 
 };
 
